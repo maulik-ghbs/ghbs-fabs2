@@ -3,18 +3,69 @@
 {% set pageName="Home" %}
 
 {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Get help buying for schools</h1>
+      
+      <h2 class="govuk-heading-m">V2 Recording route to market</h2>
+      <p><a class="govuk-link" href="v2/procurement-operations/procurement?branding=DfE&userType=procurement-operations">Procurement operations</a> |
+        <a class="govuk-link" href="v2/school-buyer/procurement?branding=DfE&userType=school-buyer">School buyer</a></p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Add route to market in Stage 1 that replicates options from the
+          live case management system.</li>
+        <li>Picking a route to market changes a placeholder task in stage 2</li>
+        <li>Procurement operations can complete the route to market task, but
+          school users can only view the answers as statements</li>
+        <li>Stage 1 approval task can be done when the preceding tasks are
+          complete</li>
+        <li>Stage 2 unlocks when stage 1 is approved</li>
+        <li>Add task to indicate if the procurement is above the threshold,
+          if so then show the additional check before going to market</li>
+        <li>Direct awarded become Non-DfE deal or framework</li>
+        <li>Task lists move to includes files</li>
+      </ul>
+      <h2 class="govuk-heading-m">V2 Fixing bugs</h2>
+      <p><a class="govuk-link" href="v2/procurement-operations/procurement?branding=DfE&userType=procurement-operations">Procurement operations</a> |
+        <a class="govuk-link" href="v2/school-buyer/procurement?branding=DfE&userType=school-buyer">School buyer</a></p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>when clicking the continue button on the information gathering task
+          you will no longer be incorrectly redirected to the file upload page</li>
+        <li>when uploading a file you will now be returned to the task page, not
+          the task list</li>
+        <li>Cancel buttons work</li>
+        <li>pages have more sensible titles (show in the tab description)</li>
+        <li>when logged in a procurement operations person the sub nav now shows
+          all current tabs (but you cannot click into them yet)</li>
+      </ul>
+      <h2 class="govuk-heading-m">V1 How might we request information from schools?
+        </h2>
+      <p><a class="govuk-link" href="v1/procurement-operations/procurement?branding=DfE&userType=procurement-operations">Procurement operations</a> |
+        <a class="govuk-link" href="v1/school-buyer/procurement?branding=DfE&userType=school-buyer">School buyer</a></p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Show key procurement information</li>
+        <li>Prototype handles procurement operations and school buyers</li>
+        <li>different user types can now see different task lists (e.g. one can
+          have less items than another or different items)</li>
+        <li>different users can see different content for shared tasks</li>
+        <li>task statuses for common tasks are shared between users (e.g.
+          procurement operations tick all the steps to indicate something is
+          done and school users can also see the task marked as done)</li>
+        <li>removed some of the steps Julie said would come later</li>
+        <li>it also tries to strike the balance mentioned on the gateway call
+          around suggesting good practice and giving and indication of what to
+          do without teaching people to suck eggs</li>
+      </ul>
+      <h2 class="govuk-heading-m">v1 Support GOV and DfE branding</h2>
+      <p><a class="govuk-link" href="v1/start?branding=DfE">External users</a> |
+        <a class="govuk-link" href="v1/start?branding=GOVUK">Internal users</a> </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Setup DfE branding for school users</li>
+      </ul>
+      <h2 class="govuk-heading-m">Initial set up</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Setup new prototype</li>
+        <li><a href="v1/home.html">Push live to heroku</a></li>
+      </ul>
+    </div>
   </div>
-</div>
-
 {% endblock %}
