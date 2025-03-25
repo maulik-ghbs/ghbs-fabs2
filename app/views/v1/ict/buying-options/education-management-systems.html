@@ -1,6 +1,10 @@
 {% extends "v1/layouts/main-footer.html" %}
-
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block pageTitle %}
+FABS Prototype - {{ serviceName }}
+{% endblock %}
+
 
 
 
@@ -8,6 +12,9 @@
 
 {% block header %}
   {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+
+  
+
   <header class="dfe-header" role="banner">
     <div class="govuk-width-container dfe-header__container">
         <div class="dfe-header__logo">
@@ -162,9 +169,9 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
               <span class="govuk-caption-m">Framework</span>
-               <h1 class="govuk-heading-l">Communications solutions
+               <h1 class="govuk-heading-l">Education management systems
                
-                <p class="govuk-body-l" style="margin-top: 10px;" >A framework to deliver communication solutions including telecommunications and associated communication supplies, services and solutions.</p>
+                <p class="govuk-body-l" style="margin-top: 10px;">Supporting education establishments with the provision and installation of a full range of Education Management Systems tools required for the collection and management of data, efficient reporting and a means to communicate effectively to all stakeholders with access anytime, anywhere.</p>
                </h1>
                
 
@@ -254,9 +261,6 @@
 
 
 
-{% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
 
 {% block content %}
 
@@ -270,30 +274,31 @@
 <div class="govuk-grid-column-two-thirds">
 
 
-  <p class="govuk-body-l">We think you should use the Crescent Purchasing Consortium (CPC) framework.</p>
+ <!-- <p class="govuk-body-l">We think you should use the Crescent Purchasing Consortium (CPC) framework.</p> -->
         
   <div>
     <h2 class="govuk-heading-m">What it offers</h2>
-    <p>A framework that provides a comprehensive set of telecommunications and associated communication supplies, services and solutions including network connectivity, multi-media communication and mobile communication.</p>
+    <p>This framework provides the provision and installation of a full range of education management systems tools required for the collection and management of data, efficient reporting and a means to communicate effectively to all stakeholders with access anytime, anywhere.</p>
   </div>
+
 
   <div>
     <h2 class="govuk-heading-m">Benefits</h2>
     <ul class="govuk-list govuk-list--bullet">
-      <li>reduced procurement timescales and costs</li>
-      <li>direct award and further competition routes available</li>
-      <li>contract manager assistance and support</li>
+      <li>competitive pricing and special conditions exclusive to education</li>
+      <li>easy to use with free support from the Procurement Services team</li>
+      <li>orders can be placed via direct award and further competition</li>
     </ul>
   </div>
 
-  <div>
-    <h2 class="govuk-heading-m">All frameworks also offer</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>compliance with the relevant procurement regulations</li>
-      <li>supplier(s) pre-checked by the approved framework provider</li>
-      <li>pre-agreed terms and conditions</li>
-    </ul>
-  </div>
+
+ 
+
+
+
+
+  <!-- DEFAULT CONTENT FOR ALL BUYING OPTIONS -->
+
 
   <div>
     <p>All frameworks also offer</p>
@@ -306,8 +311,8 @@
 
 
 
-  <a href="https://www.thecpc.ac.uk/services/frameworks/communications-solutions" target="_blank" role="button" draggable="false" class="govuk-button govuk-!-margin-top-5 frameworkbutton--external" data-module="govuk-button">
-    Visit the <span id="supplier">CPC</span> website
+  <a href="https://www.procurementservices.co.uk/our-solutions/frameworks/education/education-management-systems" target="_blank" role="button" draggable="false" class="govuk-button govuk-!-margin-top-5 frameworkbutton--external" data-module="govuk-button">
+    Visit the <span id="supplier">Procurement Services</span> website
   </a>
           
 

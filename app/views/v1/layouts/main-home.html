@@ -5,6 +5,11 @@
 
   {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
+  {% block pageTitle %}
+  FABS Prototype - {{ serviceName }}
+{% endblock %}
+
+
   {% block header %}
     {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
     <header class="dfe-header" role="banner">
