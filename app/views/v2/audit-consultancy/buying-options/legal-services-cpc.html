@@ -5,11 +5,9 @@ FABS Prototype - {{ serviceName }}
 {% endblock %}
 
 
+
 {% block header %}
   {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
-  
-
-
   <header class="dfe-header" role="banner">
     <div class="govuk-width-container dfe-header__container">
         <div class="dfe-header__logo">
@@ -118,6 +116,33 @@ FABS Prototype - {{ serviceName }}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <section class="govuk-!-padding-top-7 govuk-!-padding-bottom-4 govuk-service-navigation">
 
     <div class="govuk-phase-banner govuk-width-container" style="margin-top: -35px; margin-bottom: 20px;">
@@ -136,17 +161,14 @@ FABS Prototype - {{ serviceName }}
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-              <span class="govuk-caption-m">Buying category</span>
-               <h1 class="govuk-heading-l">Audit or consultancy services
+              <span class="govuk-caption-m">Framework</span>
+               <h1 class="govuk-heading-l">Legal Services (CPC)
                
-                <p class="govuk-body-l" style="margin-top: 10px;">Audits for energy efficiency, or financial spend, or consultancy for education, estates management or ICT, or services such as legal or spend analysis and recovery.</p>
+                <p class="govuk-body-l" style="margin-top: 10px;" >This framework has been developed for the education sector to provide a comprehensive set of services, this includes: converting to an academy, HR and employment law, property and land law, commercial related matters, dispute resolution and litigation and legal services for education.</p>
                </h1>
                
 
-            
-
-           
-            
+               
 
 
           
@@ -157,6 +179,41 @@ FABS Prototype - {{ serviceName }}
 
 
 {% endblock %}
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/dfefrontend.js"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -204,170 +261,145 @@ FABS Prototype - {{ serviceName }}
 
 
 
+<!-- framework details-->
 
-
-
-<!-- frameworks-->
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-column-two-thirds">
 
 
-  
+<!--  <p class="govuk-body-l">We think you should use the Crescent Purchasing Consortium (CPC) framework.</p> -->
         
-
-
- <!-- 
-
-
-  
-  
-    
-
-    
-
-    
-
-    
-     
-    
-      
-
-
-
-              -->
-
-<ul class="chevron-card-list">
-  <li class="chevron-card">
-    <h2 class="govuk-heading-m">Buying options<p class="govuk-body-m"  style="margin-top: 10px;">All buying options are DfE-approved and listed alphabetically.</p></h2>
-    
-  </li>
-  
-
-
-
-
-
-
-
-  <li class="chevron-card">
-    <div class="chevron-card__wrapper">
-      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
-        <a class="govuk-link chevron-card__link" href="buying-options/energy-cost-recovery">Energy cost recovery services</a>
-      </p>
-      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">Sourced by the DfE on behalf of schools and trusts, this service provides access to extensive energy bill audit and cost recovery services.</p>
-    </div>
-  </li>
-
-  <li class="chevron-card">
-    <div class="chevron-card__wrapper">
-      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
-        <a class="govuk-link chevron-card__link" href="buying-options/estates-facilities-professional">Estates and facilities professional services</a>
-      </p>
-      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">A dynamic purchasing system (DPS) that supplies estates and facilities consultancy services to educational establishments and supports members in delivering a wide range of works projects and programmes including, but not limited to new builds, refurbishments and maintenance.</p>
-    </div>
-  </li>
-
-  <li class="chevron-card">
-    <div class="chevron-card__wrapper">
-      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
-        <a class="govuk-link chevron-card__link" href="buying-options/legal-services-cpc">Legal services (CPC)</a>
-      </p>
-      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">This framework has been developed for the education sector to provide a comprehensive set of services, this includes: converting to an academy, HR and employment law, property and land law, commercial related matters, dispute resolution and litigation and legal services for education.</p>
-    </div>
-  </li>
-
-  <li class="chevron-card">
-    <div class="chevron-card__wrapper">
-      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
-        <a class="govuk-link chevron-card__link" href="buying-options/specialist-professional-services">Specialist professional services</a>
-      </p>
-      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">Specifically designed for the procurement of specialist professional services by the public sector covering a range of spend areas, including facilities management, catering, construction, environment, sustainability, waste, ICT and education consultancy. Extensive experience within the local authority and school sector.</p>
-    </div>
-  </li>
-  
-
- 
-  
-
-
-
+  <div>
+    <h2 class="govuk-heading-m">What it offers</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>academy conversion and post-conversion</li>
+      <li>commercial, contracts and procurement law</li>
+      <li>human resources and employment law</li>
+      <li>property and land law</li>
+      <li>education and charity law</li>
+      <li>construction and estates management</li>
+      <li>corporate governance</li>
+      <li>data protection and freedom of information</li>
+      <li>health and safety</li>
+      <li>intellectual property rights and licensing</li>
+      <li>litigation and dispute resolution</li>
+      <li>private finance initiatives (PFI)</li>
+      <li>shared services</li>
+      <li>student matters (including admissions, exclusions and safeguarding)</li>
+      <li>exam grading issues</li>
+      <li>advice specific to state schools of all types, faith schools and independent schools</li>
+      <li>special education needs</li>
 
     </ul>
+  </div>
 
+  
 
+  <div>
+    <h2 class="govuk-heading-m">Benefits</h2>
     
-    
-            </div>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>free quote tool</li>
+      <li>national coverage with competitive pricing and discounts on market rates</li>
+      <li>bespoke user guide and further competition templates</li>
+    </ul> 
+
+  </div>
 
 
 
 
 
 
+  <!-- DEFAULT CONTENT FOR ALL BUYING OPTIONS -->
+
+  <div>
+    <p>All frameworks also offer</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>compliance with the relevant procurement regulations</li>
+      <li>suppliers pre-checked by the approved framework provider</li>
+      <li>pre-agreed terms and conditions</li>
+    </ul>
+  </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    <div class="govuk-grid-column-one-third">
-
-      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
-        <h2 class="govuk-heading-s" id="subsection-title">
-          Related content
-        </h2>
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="govuk-list govuk-!-font-size-16">
-            <li>
-              <a href="https://www.gov.uk/guidance/plan-technology-for-your-school?utm_medium=referral&utm_source=ghbs_framework" target="_blank">
-                Plan technology for your school
-              </a>
-            </li>
-            <li>
-              <a href="https://www.gov.uk/guidance/buying-for-schools--2" target="_blank">
-                Buying for schools guidance
-              </a>
-            </li>
-            <li>
-              <a href="https://www.gov.uk/guidance/meeting-digital-and-technology-standards-in-schools-and-colleges/broadband-internet-standards-for-schools-and-colleges" target="_blank">
-               Broadband internet standards for schools and colleges
-              </a>
-            </li>
-
- <!--           <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
-              </a>
-            </li> -->
+  <a href="https://www.thecpc.ac.uk/services/frameworks/legal-services" target="_blank" role="button" draggable="false" class="govuk-button govuk-!-margin-top-5 frameworkbutton--external" data-module="govuk-button">
+    Visit the <span id="supplier">CPC</span> website
+  </a>
           
 
 
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           
-        <li>
-          <a href="https://buyingforschools.blog.gov.uk/2024/11/19/update-for-schools-and-trusts-on-procurement-act-2023-are-you-ready/" target="_blank">
-            Register for e-learning and information about the new Procurement Act 2023
-          </a>
-        </li>  
+
+        </div>
 
 
 
-          </ul>
-        </nav>
-      </aside>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="govuk-grid-column-one-third">
+
+          <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+            <h2 class="govuk-heading-s" id="subsection-title">
+              Related content
+            </h2>
+            <nav role="navigation" aria-labelledby="subsection-title">
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <a href="https://www.gov.uk/guidance/plan-technology-for-your-school?utm_medium=referral&utm_source=ghbs_framework" target="_blank">
+                    Plan technology for your school
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.gov.uk/guidance/buying-for-schools--2" target="_blank">
+                    Buying for schools guidance
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.gov.uk/guidance/meeting-digital-and-technology-standards-in-schools-and-colleges/broadband-internet-standards-for-schools-and-colleges" target="_blank">
+                   Broadband internet standards for schools and colleges
+                  </a>
+                </li>
+    
+     <!--           <li>
+                  <a href="#" class="govuk-!-font-weight-bold">
+                    More <span class="govuk-visually-hidden">in Subsection</span>
+                  </a>
+                </li> -->
+              
+    
+    
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+               
+            <li>
+              <a href="https://buyingforschools.blog.gov.uk/2024/11/19/update-for-schools-and-trusts-on-procurement-act-2023-are-you-ready/" target="_blank">
+                Register for e-learning and information about the new Procurement Act 2023
+              </a>
+            </li>  
+    
+    
+    
+              </ul>
+            </nav>
+          </aside>
+    
+        </div>
     </div>
-</div>
-
+    
 
 
 
