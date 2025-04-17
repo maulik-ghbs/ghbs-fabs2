@@ -1,0 +1,218 @@
+{#
+  For guidance on how to use layouts see:
+  https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+  #}
+
+  {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+  {% block header %}
+    {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+    <header class="dfe-header" role="banner">
+      <div class="govuk-width-container dfe-header__container">
+          <div class="dfe-header__logo">
+            <a class="dfe-header__link" href="v3/home" aria-label="DfE homepage">
+            <img src="/public/images/dfe-logo.png" class="dfe-logo" alt="Department for Education">
+            <img src="/public/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="Department for Education">
+            </a>
+
+         
+
+          </div>
+          
+          <!-- removed content for the home page -->
+          
+          <div class="dfe-header__content" id="content-header">
+          <!--  
+            <ul class="dfe-header__action-links">
+                <li>
+                  <a href="/" class="govuk-link govuk-link--inverse">My account</a>
+                </li>
+                <li>
+                  <a href="/" class="govuk-link govuk-link--inverse">Sign out</a>
+                </li>
+            </ul> 
+            -->
+            <div class="dfe-header__menu">
+                <button class="dfe-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-expanded="false">Menu</button>
+            </div>
+            <div class="dfe-header__search">
+                <button class="dfe-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+                  <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                      <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                  </svg>
+                  <span class="govuk-visually-hidden">Search</span>
+                </button>
+                <div class="dfe-header__search-wrap" id="wrap-search">
+                  <form class="dfe-header__search-form" id="search" action="/search/" method="get" role="search">
+                      <label class="govuk-visually-hidden" for="search-field">Search this website</label>
+                      <input class="dfe-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off" spellcheck="false" data-ms-editor="true">
+                      <button class="dfe-search__submit" type="submit">
+                        <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                        </svg>
+                        <span class="govuk-visually-hidden">Search</span>
+                      </button>
+                      <button class="dfe-search__close" id="close-search">
+                        <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                            <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                        </svg>
+                        <span class="govuk-visually-hidden">Close search</span>
+                      </button>
+                  </form>
+                </div>
+            </div>
+          </div>
+
+        
+
+     
+        
+
+      </div>
+      <div class="govuk-width-container dfe-header__service-name">
+          <a href="/" class="dfe-header__link--service">Get help buying for schools</a>
+      </div>
+      <nav class="dfe-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+          <div class="govuk-width-container">
+            <p class="dfe-header__navigation-title">
+                <span id="label-navigation">
+                  Menu
+            <div id="extwaiokist" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="0.751" s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe=" vn="9colr"><div id="extwaigglbit" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="0.751" s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe="></div></div></span>
+            <button class="dfe-header__navigation-close" id="close-menu">
+                <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                  <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                </svg>
+                <span class="govuk-visually-hidden">Close menu</span>
+            </button>
+            </p>
+            <ul class="dfe-header__navigation-list">
+                <li class="dfe-header__navigation-item dfe-header__navigation-item--current">
+                  <a class="dfe-header__navigation-link" href="home">
+                      Home
+                      <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                        <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                      </svg>
+                  </a>
+                </li>
+                <li class="dfe-header__navigation-item ">
+                  <a class="dfe-header__navigation-link" href="guidance">
+                      Guidance
+                      <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                        <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                      </svg>
+                  </a>
+                </li>
+             
+            </ul>
+          </div>
+      </nav>
+    </header>
+    <div class="govuk-phase-banner govuk-width-container">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>
+        <span class="govuk-phase-banner__text">This is a new service. Help us
+          improve it and <a class="govuk-link" href="https://staging.get-help-buying-for-schools.service.gov.uk/customer_satisfaction_surveys/new?service=supported_journey&source=banner_link">
+          give your feedback by email</a>.</span>
+      </p>
+    </div>
+  {% endblock %}
+  
+  {% block scripts %}
+    {{ super() }}
+    <script src="/public/javascripts/dfefrontend.js"></script>
+  {% endblock %}
+  
+{% block footer %}
+  <footer class="govuk-footer">
+    <div class="govuk-width-container">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+         
+         <!-- Grid row links, removed for the MVP
+         
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <ul class="govuk-list govuk-list--spaced">
+                <li class="govuk-!-font-weight-bold">Service information</li>
+                <li><a class="govuk-link" href="#">About us</a></li>
+                <li><a class="govuk-link" href="#">About "DfE-approved"</a>
+                  </li>
+                <li><a class="govuk-link" href="#">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <ul class="govuk-list govuk-list--spaced">
+                <li class="govuk-!-font-weight-bold">Site information</li>
+                <li><a class="govuk-link" href="#">Accessibility statement</a>
+                  </li>
+                <li><a class="govuk-link" href="#">Privacy notice</a></li>
+                <li><a class="govuk-link" href="#">Terms and conditions</a></li>
+              </ul>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <ul class="govuk-list govuk-list--spaced">
+                <li class="govuk-!-font-weight-bold">Give feedback</li>
+                <li><a class="govuk-link" href="#">Give feedback</a></li>
+                <li><a class="govuk-link" href="#">Report a technical issue
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+
+ <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          -->
+
+
+
+         
+          <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" target="_blank" href="https://www.get-help-buying-for-schools.service.gov.uk/procurement-support?referred_by=RnJhbWV3b3JrIG91dGNvbWUgcGFnZSBodHRwczovL2ZpbmQtZGZlLWFwcHJvdmVkLWZyYW1ld29yay5zZXJ2aWNlLmdvdi51ay9maW5kL3R5cGUvb24tZ29pbmcvc2VydmljZXMtY2F0ZWdvcmllcy9lbmVyZ3kvZW5lcmd5L2hpc3RvcmljLWJpbGxzL2RlYnQtcmVzb2x1dGlvbi1zZXJ2aWNlcw==&session_id=518892a7-19e8-4e7c-9aaf-1b1939b1e9b2">
+              Request help and support for your procurement</a>
+              </li>
+            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="feedback">
+                Feedback</a>
+              </li>
+            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="accessibility-statement">
+              Accessibility statement</a>
+              </li>
+            </br>
+              <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="privacy">
+                Privacy notice</a>
+                </li>
+                <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="terms">
+                  Terms and conditions</a>
+                  </li>
+
+          </ul>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="govuk-footer__licence-logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 483.2 195.7"
+            height="17"
+            width="41">
+            <path
+              fill="currentColor"
+              d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+          </svg>
+          <span class="govuk-footer__licence-description">
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+          </span>
+        </div>
+        <div class="govuk-footer__meta-item">
+          <a
+            class="govuk-footer__link govuk-footer__copyright-logo"
+            href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+            © Crown copyright
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}  

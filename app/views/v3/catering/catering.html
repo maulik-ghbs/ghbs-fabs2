@@ -1,0 +1,420 @@
+{% extends "v3/layouts/main-footer.html" %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% block pageTitle %}
+FABS Prototype - {{ serviceName }}
+{% endblock %}
+
+
+{% block header %}
+  {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+  
+
+
+  <header class="dfe-header" role="banner">
+    <div class="govuk-width-container dfe-header__container">
+        <div class="dfe-header__logo">
+          <a class="dfe-header__link" href="/v3/home" aria-label="DfE homepage">
+          <img src="/public/images/dfe-logo.png" class="dfe-logo" alt="Department for Education">
+          <img src="/public/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="Department for Education">
+          </a>
+
+       
+
+        </div>
+        
+        <!-- removed content for the home page -->
+        
+        <div class="dfe-header__content" id="content-header">
+        <!--  
+          <ul class="dfe-header__action-links">
+              <li>
+                <a href="/" class="govuk-link govuk-link--inverse">My account</a>
+              </li>
+              <li>
+                <a href="/" class="govuk-link govuk-link--inverse">Sign out</a>
+              </li>
+          </ul> 
+          -->
+          <div class="dfe-header__menu">
+              <button class="dfe-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-expanded="false">Menu</button>
+          </div>
+          <div class="dfe-header__search">
+              <button class="dfe-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+                <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                    <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                </svg>
+                <span class="govuk-visually-hidden">Search</span>
+              </button>
+              <div class="dfe-header__search-wrap" id="wrap-search">
+                <form class="dfe-header__search-form" id="search" action="/search/" method="get" role="search">
+                    <label class="govuk-visually-hidden" for="search-field">Search this website</label>
+                    <input class="dfe-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off" spellcheck="false" data-ms-editor="true">
+                    <button class="dfe-search__submit" type="submit">
+                      <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                          <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                      </svg>
+                      <span class="govuk-visually-hidden">Search</span>
+                    </button>
+                    <button class="dfe-search__close" id="close-search">
+                      <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                          <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                      </svg>
+                      <span class="govuk-visually-hidden">Close search</span>
+                    </button>
+                </form>
+              </div>
+          </div>
+        </div>
+
+      
+
+   
+      
+
+    </div>
+    <div class="govuk-width-container dfe-header__service-name">
+        <a href="/" class="dfe-header__link--service">Get help buying for schools</a>
+    </div>
+    <nav class="dfe-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+        <div class="govuk-width-container">
+          <p class="dfe-header__navigation-title">
+              <span id="label-navigation">
+                Menu
+          <div id="extwaiokist" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="0.751" s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe=" vn="9colr"><div id="extwaigglbit" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="0.751" s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe="></div></div></span>
+          <button class="dfe-header__navigation-close" id="close-menu">
+              <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+              </svg>
+              <span class="govuk-visually-hidden">Close menu</span>
+          </button>
+          </p>
+          <ul class="dfe-header__navigation-list">
+              <li class="dfe-header__navigation-item dfe-header__navigation-item--current">
+                <a class="dfe-header__navigation-link" href="/v3/home">
+                    Home
+                    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                    </svg>
+                </a>
+              </li>
+              <li class="dfe-header__navigation-item ">
+                <a class="dfe-header__navigation-link" href="/v3/home">
+                    Guidance
+                    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                    </svg>
+                </a>
+              </li>
+           
+          </ul>
+        </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+  <section class="govuk-!-padding-top-7 govuk-!-padding-bottom-4 govuk-service-navigation">
+
+    <div class="govuk-phase-banner govuk-width-container" style="margin-top: -35px; margin-bottom: 20px;">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>
+        <span class="govuk-phase-banner__text">This is a new service. Help us
+          improve it and <a class="govuk-link" href="https://staging.get-help-buying-for-schools.service.gov.uk/customer_satisfaction_surveys/new?service=supported_journey&source=banner_link">
+          give your feedback by email</a>.</span>
+      </p>
+    </div>
+
+
+    <div class="govuk-width-container" style="margin-top: 0px;">
+      <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+        <ol class="govuk-breadcrumbs__list govuk-body-s">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v3/home">Home</a>
+          </li>
+         
+         
+        </ol>
+      </nav>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="govuk-width-container" style="margin-top: 35px;">
+
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <span class="govuk-caption-m">Buying category</span>
+               <h1 class="govuk-heading-l">Catering
+               
+                <p class="govuk-body-l" style="margin-top: 10px;">Catering equipment, catering service or food supplies.</p>
+               </h1>
+               
+
+            
+
+           
+            
+
+
+          
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+
+
+
+
+
+
+<!-- frameworks-->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+  
+        
+
+
+ <!-- 
+
+
+  
+  
+    
+
+    
+
+    
+
+    
+     
+    
+      
+
+
+
+              -->
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m">Buying options<p class="govuk-body-m"  style="margin-top: 10px;">All buying options are DfE-approved and listed alphabetically.</p></h2>
+    
+  </li>
+  
+
+
+
+
+
+  <li class="chevron-card">
+    <div class="chevron-card__wrapper">
+      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+        <a class="govuk-link chevron-card__link" href="buying-options/building-in-use-support.html">Building in use - support services</a>
+      </p>
+      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">A framework providing catering, cleaning and caretaking, security and reception, CCTV (inclusive of remote monitoring), car park management, mobile patrols and key holding, food hygiene inspection, waste management. There's also a 'whole house' option to accommodate all or several of these. This is a dynamic purchasing system (DPS) open to, and suitable for both national and regional suppliers throughout its entire duration.</p>
+    </div>
+  </li>
+
+  <li class="chevron-card">
+    <div class="chevron-card__wrapper">
+      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+        <a class="govuk-link chevron-card__link" href="buying-options/catering-services-education-buying.html">Catering services (Education Buying)</a>
+      </p>
+      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">Supporting education establishments with the provision of outsourced catering services, with the flexibility to respond to changes in the market.
+      </p>
+    </div>
+  </li>
+
+  <li class="chevron-card">
+    <div class="chevron-card__wrapper">
+      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+        <a class="govuk-link chevron-card__link" href="buying-options/catering-services-espo.html">Catering services (ESPO)</a>
+      </p>
+      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">Supporting education establishments with the provision of outsourced catering services, offering flexible catering provisions and a range of service models. It also covers ‘holiday food programmes’ for those looking to provide meals meeting the School Meal Standards during holiday periods.
+      </p>
+    </div>
+  </li>
+
+  <li class="chevron-card">
+    <div class="chevron-card__wrapper">
+      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+        <a class="govuk-link chevron-card__link" href="buying-options/commercial-catering-equipmnet.html">Commercial catering equipment</a>
+      </p>
+      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">Supporting education establishments with a route to purchase or hire a large range of commercial catering equipment and associated goods and services, including catering equipment, maintenance response services and kitchen design services.</p>
+    </div>
+  </li>
+  
+  <li class="chevron-card">
+    <div class="chevron-card__wrapper">
+      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+        <a class="govuk-link chevron-card__link" href="buying-options/grocery.html">Grocery, fresh, chilled and frozen foods</a>
+      </p>
+      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">Supporting education establishments with a simple and competitive route to buy goods for their in-house catering service.
+      </p>
+    </div>
+  </li>
+
+  <li class="chevron-card">
+    <div class="chevron-card__wrapper">
+      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+        <a class="govuk-link chevron-card__link" href="buying-options/outsourced-catering-services.html">Outsourced catering services</a>
+      </p>
+      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">Supporting education establishments with a compliant route for the provision of outsourced catering services.
+      </p>
+    </div>
+  </li>
+
+  <li class="chevron-card">
+    <div class="chevron-card__wrapper">
+      <p class="govuk-body-m  govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+        <a class="govuk-link chevron-card__link" href="buying-options/sandwiches-food-to-go.html">Sandwiches and food to go</a>
+      </p>
+      <p class="govuk-body-m chevron-card__description" style="margin-top: 10px;">A framework that offers educational establishments access to a range of sandwiches, filled rolls and baps, bagels and wraps, and food-to-go products including hot and cold eats, from a range of suppliers who hold relevant and in-date third party food safety accreditation certificates.
+      </p>
+    </div>
+  </li>
+
+  
+
+
+    </ul>
+
+
+    
+    
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-s" id="subsection-title">
+          Related content
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/guidance/plan-technology-for-your-school?utm_medium=referral&utm_source=ghbs_framework" target="_blank">
+                Plan technology for your school
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/guidance/buying-for-schools--2" target="_blank">
+                Buying for schools guidance
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/guidance/meeting-digital-and-technology-standards-in-schools-and-colleges/broadband-internet-standards-for-schools-and-colleges" target="_blank">
+               Broadband internet standards for schools and colleges
+              </a>
+            </li>
+
+ <!--           <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li> -->
+          
+
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           
+        <li>
+          <a href="https://buyingforschools.blog.gov.uk/2024/11/19/update-for-schools-and-trusts-on-procurement-act-2023-are-you-ready/" target="_blank">
+            Register for e-learning and information about the new Procurement Act 2023
+          </a>
+        </li>  
+
+
+
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}
