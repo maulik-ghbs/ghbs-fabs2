@@ -1,0 +1,470 @@
+{% extends "v3/layouts/main-footer.html" %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% block pageTitle %}
+FABS Prototype - {{ serviceName }}
+{% endblock %}
+
+
+{% block header %}
+  {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+  
+  {% include "/v3/includes/nav.html" %}
+
+  <section class="govuk-!-padding-top-7 govuk-!-padding-bottom-4 govuk-service-navigation">
+
+  {% include "/v3/includes/beta-banner.html" %}
+
+
+  <!-- Breadcrums -->
+    <div class="govuk-width-container" style="margin-top: 0px;">
+      <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+        <ol class="govuk-breadcrumbs__list govuk-body-s">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v3/home">Home</a>
+          </li>
+         
+         
+        </ol>
+      </nav>
+    </div>
+
+
+
+
+
+    <div class="govuk-width-container" style="margin-top: 35px;">
+
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <span class="govuk-caption-m">DfE approved</span>
+               <h1 class="govuk-heading-l">All buying options
+               
+                <p class="govuk-body-l" style="margin-top: 10px;">This is a list of all DfE approved framework agreements. Use one to ensure your procurement is compliant. 
+
+                  We'll continue to review and update this list. </p>
+                  
+               </h1>
+               
+
+            
+
+           
+            
+
+
+          
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="govuk-grid-column-one-third">
+
+
+    <nav role="navigation" aria-labelledby="subsection-title">
+      
+      <ul class="moj-side-navigation__list govuk-body-s">
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="#1" aria-current="location">Audit or consultancy services</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#2">Banking and loans</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#3">Catering</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#4">Classroom supplies</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#5">Cleaning</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#6">Energy</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#7">Equipment for activities and clubs</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#8">Grounds maintanance and estates</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#9">IT</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#10">Risk protection and insurance</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#11">Supply teacher, staff and HR</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="#12">Vehicle hire and purchase</a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<div class="govuk-grid-column-two-thirds">
+  <ul class="chevron-card-list">
+    <li class="chevron-card">
+      <h2 class="govuk-heading-m" id="1">Audit or consultancy services</h2>
+  </li>
+  {% include "/v3/includes/buying-options/audit-consultancy.html" %}  
+  </ul>
+
+ <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> -->
+
+</br>
+
+  <ul class="chevron-card-list">
+    <li class="chevron-card">
+      <h2 class="govuk-heading-m" id="2">Banking and loans</h2>
+  </li>
+  {% include "/v3/includes/buying-options/banking-loans.html" %}  
+  </ul>
+  </br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="3">Catering</h2>
+</li>
+{% include "/v3/includes/buying-options/catering.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="4">Classroom supplies</h2>
+</li>
+{% include "/v3/includes/buying-options/classroom-supplies.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="5">Cleaning</h2>
+</li>
+{% include "/v3/includes/buying-options/cleaning.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="6">Energy</h2>
+</li>
+{% include "/v3/includes/buying-options/energy.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="7">Equipment for activities and clubs</h2>
+</li>
+{% include "/v3/includes/buying-options/equipment-for-activities-clubs.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="8">Ground maintanance and estates</h2>
+</li>
+{% include "/v3/includes/buying-options/grounds-maintenance-estates.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="9">IT</h2>
+</li>
+{% include "/v3/includes/buying-options/ict.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="10">Risk protection and insurance</h2>
+</li>
+{% include "/v3/includes/buying-options/risk-protection-insurance.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="11">Supply teachers, staff and HR</h2>
+</li>
+{% include "/v3/includes/buying-options/supply-teachers.html" %}  
+</ul>
+</br>
+
+<ul class="chevron-card-list">
+  <li class="chevron-card">
+    <h2 class="govuk-heading-m" id="12">Vehicle hire and purchase</h2>
+</li>
+{% include "/v3/includes/buying-options/vehicle-hire-purchase.html" %}  
+</ul>
+</br>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</div>
+
+
+
+
+{% endblock %}
